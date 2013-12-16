@@ -1,3 +1,30 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
-module.exports = []
+module.exports = [
+    {
+        "file": "plugins/com.chariotsolutions.nfc.plugin/www/phonegap-nfc.js",
+        "id": "com.chariotsolutions.nfc.plugin.NFC",
+        "runs": true
+    },
+    {
+        "file": "plugins/com.chariotsolutions.toast.plugin/www/phonegap-toast.js",
+        "id": "com.chariotsolutions.toast.plugin.Toasty",
+        "clobbers": [
+            "toast"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.vibration/www/vibration.js",
+        "id": "org.apache.cordova.vibration.notification",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "file": "plugins/com.blackberry.invoke/www/client.js",
+        "id": "com.blackberry.invoke.client",
+        "clobbers": [
+            "blackberry.invoke"
+        ]
+    }
+]
 });
